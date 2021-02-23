@@ -145,9 +145,10 @@ def main():
     - runs process_log_data
     """
     spark = create_spark_session()
-    input_data = "s3a://udacity-dend/"
+    #input_data = "s3a://udacity-dend/"
+    input_data = config['STORAGE']['INPUT_DATA']
     output_data = "./"
-    # output_data = "<bucket_name>>"
+    # output_data = config['STORAGE']['INPUT_DATA']
 
     process_song_data(spark, input_data, output_data)
     process_log_data(spark, input_data, output_data)

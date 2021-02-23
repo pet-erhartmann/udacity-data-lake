@@ -19,11 +19,12 @@ listening to.
 * etl_test.ipynb
   * notebook with test code for the ETL process
 * dl.cfg
-  * config files that contains the AWS key and secret
+  * config file that contains the AWS key/secret and input/output location
+  
 
 ## How-to
 * add your AWS credentials to dl.cfg
-* update the output_data variable in etl.py to your S3 destination
+* update the INPUT_DATA and OUTPUT_DATA variables in dl.cfg
 * run etl.py to extract data and save to s3 for fact and dimension tables
 
 ## Schema
