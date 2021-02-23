@@ -61,3 +61,10 @@ specific units
 
 * only logs with the action 'Next Song' are processed in the ETL
 * all fields are inserted as in source files, only time dimensions have calculated date columns (hour, day, month, etc.)
+
+## Dev Setup
+```
+virtualenv .env
+source .env/bin/activate
+python -m pip install -r requirements.txt
+```
