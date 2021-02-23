@@ -17,9 +17,13 @@ listening to.
 * etl.py
   * includes the code to write data for the dimension and fact tables
 * etl_test.ipynb
-  * notebook with test code for ETL process
+  * notebook with test code for the ETL process
+* dl.cfg
+  * config files that contains the AWS key and secret
 
 ## How-to
+* add your AWS credentials to dl.cfg
+* update the output_data variable in etl.py to your S3 destination
 * run etl.py to extract data and save to s3 for fact and dimension tables
 
 ## Schema
@@ -49,13 +53,15 @@ specific units
 
 ### ETL PROCESSING
 
-* Data in dimension tables is updated as defined in sql_queries.py
-  * user_table_insert
-  * song_table_insert
-  * artist_table_insert
-  * time_table_insert 
-* only insert of new data, no updates
-* dimension tables do not contain null values for PKs
+* The datasets are populated in these functions
+  * process_song_data()
+    * Artists
+    * Songs
+  * process_log_data()
+    * users
+    * time
+    * songplays
+  
 
 ### FILTERING/MODIFICATION
 
